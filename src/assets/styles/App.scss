@@ -1,0 +1,161 @@
+@import "~bootstrap/scss/bootstrap";
+
+/* @font-face for the minecraft text */
+@font-face {
+  font-family: "Minecraft Regular";
+  src: url("../fonts/1_Minecraft-Regular.eot?") format("eot"),
+    url("../fonts/1_Minecraft-Regular.woff") format("woff"),
+    url("../fonts/1_Minecraft-Regular.ttf") format("truetype"),
+    url("../fonts/1_Minecraft-Regular.svg#Minecraft-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  border: none;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+body {
+  background: linear-gradient(#a1b5e0, #a2a5bb);
+  overflow: hidden;
+  margin: 0;
+  border: transparent;
+}
+// The modal ui for the chest
+.modal-chest-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  .overlay {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  .modal-chest {
+    z-index: 99;
+    border: 4px solid #000;
+    background: #ceccce;
+    color: #575557;
+    width: 35vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50 rgba(0, 0, 0, 0.2);
+    &::before {
+      z-index: -9;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      position: absolute;
+      content: "";
+      border-top: 8px solid #fefdfe;
+      border-left: 8px solid #fefdfe;
+      border-right: 8px solid #414041;
+      border-bottom: 8px solid #414041;
+    }
+    .top {
+      padding: 20px 20px 10px 20px;
+    }
+    .middle {
+      display: flex;
+      padding: 5px 20px 10px 20px;
+      font-family: "Minecraft Regular";
+      justify-content: center;
+      align-items: center;
+    }
+    .myCard {
+      min-height: 60vh;
+      box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50 rgba(0, 0, 0, 0.2);
+    }
+    .myPic {
+      min-height: 15vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .myPic img {
+      width: 6rem;
+      z-index: 2;
+    }
+    .circle {
+      width: 5rem;
+      height: 5rem;
+      background: linear-gradient(to right, #a1b5e0, #a2a5bb);
+      position: absolute;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .info {
+      padding: 2rem;
+      font-weight: lighter;
+    }
+    .infoPages {
+      justify-content: space-between;
+    }
+    .infoPages button {
+      margin: 1.3rem;
+      padding: 0.5rem 1.5rem;
+      background: grey;
+      border: none;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .infoPages button:hover {
+      background: rgb(66, 65, 65);
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 48px;
+      .close {
+        font-family: "Minecraft Regular";
+        font-size: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        width: 48px;
+        padding: 8px;
+        margin-right: 8px;
+        margin-bottom: 16px;
+        cursor: pointer;
+      }
+      h4 {
+        margin: 0;
+        font-size: 40px;
+        font-family: "Minecraft Regular";
+        font-weight: 500;
+      }
+    }
+  }
+}

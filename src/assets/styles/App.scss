@@ -1,5 +1,14 @@
 @import "~bootstrap/scss/bootstrap";
-
+@keyframes scale {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
 /* @font-face for the minecraft text */
 @font-face {
   font-family: "Minecraft Regular";
@@ -30,7 +39,7 @@ img {
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
-  user-drag: none;
+  -user-drag: none;
 }
 
 body {
@@ -58,7 +67,7 @@ body {
     border: 4px solid #000;
     background: #ceccce;
     color: #575557;
-    width: 35vw;
+    width: 90vw;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -83,18 +92,14 @@ body {
     .top {
       padding: 20px 20px 10px 20px;
     }
-    .middle {
-      display: flex;
-      padding: 5px 20px 10px 20px;
-      font-family: "Minecraft Regular";
-      justify-content: center;
-      align-items: center;
-    }
     .myCard {
-      min-height: 60vh;
+      overflow: auto;
+      outline: groove;
+      height: 70vh;
       box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50 rgba(0, 0, 0, 0.2);
     }
     .myPic {
+      position: relative;
       min-height: 15vh;
       display: flex;
       align-items: center;
@@ -116,21 +121,13 @@ body {
       padding: 2rem;
       font-weight: lighter;
     }
-    .infoPages {
-      justify-content: space-between;
-    }
-    .infoPages button {
-      margin: 1.3rem;
-      padding: 0.5rem 1.5rem;
-      background: grey;
-      border: none;
-      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-      border-radius: 30px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .infoPages button:hover {
-      background: rgb(66, 65, 65);
+    .infoLogo {
+      height: 3rem;
+      margin: 1rem;
+      transition: all 0.3s;
+      &:hover {
+        transform: scale(1.5);
+      }
     }
     .header {
       display: flex;
@@ -155,6 +152,316 @@ body {
         font-size: 40px;
         font-family: "Minecraft Regular";
         font-weight: 500;
+      }
+    }
+    .left {
+      display: flex;
+      width: 35vw;
+      height: 80vh;
+      padding: 5px 20px 10px 20px;
+      font-family: "Minecraft Regular";
+      justify-content: center;
+      align-items: center;
+    }
+    .right {
+      display: flex;
+      width: 65vw;
+      height: 80vh;
+      padding-right: 10px;
+      font-family: "Minecraft Regular";
+      justify-content: center;
+      align-items: center;
+    }
+    .middle {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .tabs {
+    width: 55vw;
+  }
+  .tabs nav {
+    align-items: space-between;
+    justify-content: center;
+    font-style: #000;
+  }
+  .experiences {
+    padding-left: 10px;
+    overflow: auto;
+    height: 70vh;
+  }
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    height: 70vh;
+    overflow: auto;
+    justify-content: space-between;
+  }
+  .card {
+    // --color-background: rgba(245, 245, 245, 0.77);
+    --color-background: #fff;
+    // functionality
+    // give a 3D-positioned element some perspective, give it a large number to make nicer.
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 25rem;
+    width: 21rem;
+    margin: 3rem 1rem;
+    font-weight: 200;
+    border-radius: 1rem;
+    // box-shadow: var(--shadow-dark);
+
+    &-scale {
+      animation: scale both 0.4s cubic-bezier(0.4, 0, 0, 1.5);
+    }
+
+    &__side {
+      color: #fff;
+      font-size: 2rem;
+
+      height: 30rem;
+      transition: all 0.8s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      // if we set it to hidden, it basically hides the back part of an element.
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: 1rem;
+      // to avoid image cover radius
+      overflow: hidden;
+      box-shadow: var(--shadow-light);
+
+      &--front {
+        background-color: var(--color-background);
+      }
+
+      &--back {
+        transform: rotateY(180deg);
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-image: linear-gradient(
+          to right bottom,
+          var(--color-orange-dark),
+          var(--color-orange-light)
+        );
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+      transform: rotateY(0);
+    }
+
+    // front side styling
+    &__picture {
+      background-size: cover;
+      height: 10rem;
+      // background-blend-mode: screen;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+
+      background-image: linear-gradient(
+        to right bottom,
+        var(--color-orange-light),
+        var(--color-orange-dark)
+      );
+
+      // Center image
+      white-space: nowrap;
+      text-align: center;
+
+      &--img {
+        height: 60%;
+        vertical-align: middle;
+      }
+    }
+
+    // &__heading {
+    //   font-size: 2.5rem;
+    //   font-weight: 300;
+    //   text-align: right;
+    //   color: #fff;
+    //   position: fixed;
+    //   top: 14rem;
+    //   right: 0.2rem;
+    //   width: 75%;
+    // }
+
+    // &__heading-span {
+    //   padding: 1rem 1.5rem;
+    //   // simply apply all the declarations that we have in the selector, in this case is only the padding
+    //   -webkit-box-decoration-break: clone;
+    //   box-decoration-break: clone;
+    // }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem;
+
+      &__title {
+        font-size: 2.3rem;
+        color: black;
+      }
+
+      &__tech {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+
+        &--label {
+          background-color: orangered;
+          padding: 0.3rem 1.3rem;
+          border-radius: 0.4rem;
+          margin-right: 1rem;
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+          // box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.445);
+        }
+      }
+    }
+
+    // back side styling
+    &__desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      font-size: 1.7rem;
+
+      &__details {
+        margin: 2rem 1rem;
+
+        &-ul {
+          margin-left: 2rem;
+
+          &-li {
+            margin-top: 1rem;
+          }
+        }
+      }
+
+      &__btn {
+        display: flex;
+        justify-content: space-around;
+        margin: 1rem;
+      }
+    }
+
+    // @include respond($bp-medium) {
+    @media only screen and (max-width: 1010px) {
+      height: auto;
+      width: 90%;
+      border-radius: 1rem;
+      background-color: var(--color-background);
+      box-shadow: 0 1.5rem 4rem rgba(#000, 0.15);
+
+      &__picture--img {
+        height: 80%;
+        max-width: 18rem;
+      }
+
+      &__side {
+        position: relative;
+        height: auto;
+        box-shadow: none;
+
+        &--back {
+          transform: rotateY(0);
+          -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+          border-radius: 0 0 1rem 1rem;
+        }
+      }
+
+      &:hover &__side--front {
+        transform: rotateY(0);
+      }
+
+      &__info {
+        padding: 1rem;
+      }
+
+      // font side styling
+    }
+  }
+  .btn {
+    &__effect {
+      text-align: center;
+      display: inline-block;
+      position: relative;
+      text-decoration: none;
+      color: var(--color-grey-light-1);
+      text-transform: capitalize;
+      /* background-color: - add your own background-color */
+      font: {
+        family: "Roboto", sans-serif; /* put your font-family */
+        weight: 200;
+        size: 18px;
+      }
+      padding: 0.8rem 0;
+      width: 45%;
+      border-radius: 0.6rem;
+      overflow: hidden;
+
+      &-left {
+        background-color: #e76f51;
+        transition: all 0.2s linear 0s;
+
+        &-view {
+          &:before {
+            background-image: url("../images/projects/logo-internet.svg");
+          }
+        }
+
+        &-git {
+          &:before {
+            background-image: url("../images/projects/logo-git.svg");
+          }
+        }
+
+        &-google-play {
+          &:before {
+            background-image: url("../images//projects/logo-google-play.svg");
+          }
+        }
+
+        &:before {
+          content: " ";
+          background-size: 2rem 2rem;
+          background-repeat: no-repeat;
+          background-position: center;
+          font-size: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 0;
+          right: -30px;
+          width: 30px;
+          height: 100%;
+          background-color: rgba(#fff, 0.3);
+          border-radius: 0px 0.6rem 0.6rem 0px;
+          transition: all 0.2s linear 0s;
+          text-align: center;
+        }
+
+        &:hover {
+          text-indent: -30px;
+
+          &:before {
+            right: 0;
+            text-indent: 0px;
+          }
+        }
       }
     }
   }

@@ -1,1 +1,1 @@
-Personal portfolio Shuhao Yi
+Portfolio Shuhao Yi

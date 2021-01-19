@@ -1,11 +1,7 @@
 import resume from "../../assets/images/projects/resume.svg";
-import Portfolio from "../../assets/images/projects/portfolio.svg";
 import covid19 from "../../assets/images/projects/covid19.svg";
-import noMilk from "../../assets/images/projects/no-milk.svg";
-import whackMole from "../../assets/images/projects/whack-mole.svg";
 import burger from "../../assets/images/projects/burger.svg";
 import house from "../../assets/images/projects/house.svg";
-import tour from "../../assets/images/projects/tour.svg";
 import search from "../../assets/images/projects/search.svg";
 
 /* Color palettes
@@ -85,47 +81,46 @@ export default [
       },
       {
         name: "GitHub",
-        //link: "https://github.com/stevechanvii/mysite",
+        //link: "https://github.com/syii0003/my-portfolio",
         style: "btn__effect-left-git",
         color: "#FF875F",
       },
     ],
   },
-  {
-    title: "Burger Builder",
-    backgroundStyle: {
-      backgroundImage: "linear-gradient(to right bottom, #4568DC, #B06AB3)",
-    },
-    image: burger,
-    imageTitle: "Frontend",
-    labels: [
-      { name: "React", color: "#07C8F9" },
-      { name: "Redux", color: "#6B46A9" },
-      { name: "Firebase", color: "#FCCB2E" },
-      { name: "JEST", color: "#18C212" },
-      { name: "JWT", color: "#D63AFE" },
-      { name: "CSS3", color: "#254CE2" },
-    ],
-    content: [
-      "Customize your burger and order! This App is created by React and Redux framework.",
-      "Firebase is used to Token authentication and save orders.",
-      "Deployed in Firebase.",
-    ],
-    button: [
-      {
-        name: "Demo",
-        //link: "https://myburger-7c866.firebaseapp.com/",
-        style: "btn__effect-left-view",
-        color: "#4A56D0",
-      },
-      {
-        name: "GitHub",
-        //link: "https://github.com/stevechanvii/BurgerApp",
-        style: "btn__effect-left-git",
-        color: "#6A5CC7",
-      },
-    ],
-  },
+  // {
+  //   title: "Burger Builder",
+  //   backgroundStyle: {
+  //     backgroundImage: "linear-gradient(to right bottom, #4568DC, #B06AB3)",
+  //   },
+  //   image: burger,
+  //   imageTitle: "Frontend",
+  //   labels: [
+  //     { name: "React", color: "#07C8F9" },
+  //     { name: "Redux", color: "#6B46A9" },
+  //     { name: "Firebase", color: "#FCCB2E" },
+  //     { name: "JEST", color: "#18C212" },
+  //     { name: "JWT", color: "#D63AFE" },
+  //     { name: "CSS3", color: "#254CE2" },
+  //   ],
+  //   content: [
+  //     "Customize your burger and order! This App is created by React and Redux framework.",
+  //     "Firebase is used to Token authentication and save orders.",
+  //     "Deployed in Firebase.",
+  //   ],
+  //   button: [
+  //     {
+  //       name: "Demo",
+  //       //link: "https://myburger-7c866.firebaseapp.com/",
+  //       style: "btn__effect-left-view",
+  //       color: "#4A56D0",
+  //     },
+  //     {
+  //       name: "GitHub",
+  //       style: "btn__effect-left-git",
+  //       color: "#6A5CC7",
+  //     },
+  //   ],
+  // },
   {
     title: "Job Seeker",
     backgroundStyle: {
@@ -134,7 +129,7 @@ export default [
     image: search,
     imageTitle: "Full Stack",
     labels: [
-      { name: "Java Web", color: "#217EC3" },
+      { name: "JavaEE Web", color: "#217EC3" },
       { name: "JSP", color: "#067790" },
       { name: "MySQL", color: "#01758F" },
       { name: "HTML5", color: "#E44D27" },
@@ -150,37 +145,6 @@ export default [
         //link: "https://github.com/stevechanvii/OJSS",
         style: "btn__effect-left-git",
         color: "#3C6BC5",
-      },
-    ],
-  },
-  {
-    title: "Adventure Tours",
-    backgroundStyle: {
-      backgroundImage: "linear-gradient(to right bottom, #f44369, #f9ab8f)",
-    },
-    image: tour,
-    imageTitle: "Web",
-    labels: [
-      { name: "HTML5", color: "#E44D27" },
-      { name: "SCSS", color: "#D77EAB" },
-      { name: "GitHub", color: "#000000" },
-    ],
-    content: [
-      "Programed a learning project with pure HTML5 and advanced CSS(SCSS) to implement beautiful design and animation.",
-      "Video is used to make the background dynamic.",
-    ],
-    button: [
-      {
-        name: "Demo",
-        //link: "https://stevechanvii.github.io/AdventurousTours/",
-        style: "btn__effect-left-view",
-        color: "#F23F5F",
-      },
-      {
-        name: "GitHub",
-        //link: "https://github.com/stevechanvii/AdventurousTours",
-        style: "btn__effect-left-git",
-        color: "#F56B72",
       },
     ],
   },

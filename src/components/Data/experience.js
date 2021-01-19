@@ -19,6 +19,13 @@ import SchoolIcon from "@material-ui/icons/School";
 */
 export default [
   {
+    title: "Self Learning",
+    subtitle: "My Portfolio",
+    date: "Jan 2021",
+    icon: SchoolIcon,
+    color: "navy",
+  },
+  {
     title: "Web Developer (PHP Laravel)",
     subtitle: "Zeta Digital - Melbourne",
     date: "Apr 2020 - Oct 2020",

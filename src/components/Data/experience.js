@@ -33,18 +33,17 @@ export default [
     icon: WorkIcon,
     color: "navy",
   },
-  {
-    title: "Web Developer (PHP Laravel)",
-    subtitle: "Zeta Digital - Melbourne",
-    date: "Apr 2020 - Oct 2020",
-    icon: WorkIcon,
-    color: "#F94144",
-  },
+  // {
+  //   title: "Web Developer (PHP Laravel)",
+  //   subtitle: "Zeta Digital - Melbourne",
+  //   date: "Apr 2020 - Oct 2020",
+  //   icon: WorkIcon,
+  //   color: "#F94144",
+  // },
   {
     title: "Assistant Project Manager",
     subtitle: "ASP Access Flooring - Melbourne",
-    date: "Sep 2019 - Mar 2020",
-
+    date: "Sep 2019 - Oct 2020",
     icon: WorkIcon,
     color: "#F3722C",
   },
@@ -55,13 +54,13 @@ export default [
     icon: SchoolIcon,
     color: "#F9C74F",
   },
-  {
-    title: "Frontend Developer",
-    subtitle: "Greenability, Monash Graduation Project",
-    date: "Feb 2019 - Jun 2019",
-    icon: WorkIcon,
-    color: "#f4978e",
-  },
+  // {
+  //   title: "Frontend Developer",
+  //   subtitle: "Greenability, Monash Graduation Project",
+  //   date: "Feb 2019 - Jun 2019",
+  //   icon: WorkIcon,
+  //   color: "#f4978e",
+  // },
   {
     title: "Bachelor Degrees",
     subtitle: "Management && Business Information Systems",

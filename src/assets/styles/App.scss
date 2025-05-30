@@ -195,7 +195,7 @@ body {
     flex-wrap: wrap;
     height: 70vh;
     overflow: auto;
-    justify-content: space-between;
+    // justify-content: space-between;
   }
   .card {
     // --color-background: rgba(245, 245, 245, 0.77);
@@ -206,9 +206,10 @@ body {
     -moz-perspective: 150rem;
     position: relative;
     height: 25rem;
-    width: 21rem;
+    width: 25rem;
     margin: 3rem 1rem;
     font-weight: 200;
+    cursor: default;
     border-radius: 1rem;
     // box-shadow: var(--shadow-dark);
 
@@ -401,7 +402,8 @@ body {
       text-decoration: none;
       color: var(--color-grey-light-1);
       text-transform: capitalize;
-      /* background-color: - add your own background-color */
+      
+      background-color: red;
       font: {
         family: "Roboto", sans-serif; /* put your font-family */
         weight: 200;

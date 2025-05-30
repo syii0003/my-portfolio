@@ -15,7 +15,7 @@ const Projects = () => {
           key={index}
           style={{ animationDelay: `${index * 120}ms` }}
         >
-          <div className="card__desc">
+          {/* <div className="card__desc">
             <div className="card__desc__details">
               <ul className="card__desc__details-ul">
                 {project.content.map((paragraph, index) => (
@@ -39,7 +39,7 @@ const Projects = () => {
                 </a>
               ))}
             </div>
-          </div>
+          </div> */}
         </Card>
       ))}
     </div>

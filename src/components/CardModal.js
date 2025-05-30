@@ -43,10 +43,10 @@ const CardModal = ({ open, setOpen }) => {
                       ></img>
                     </div>
                     <div className="info">
-                      <h6>Future-Ready Frontend Developer</h6>
+                      <h6>AI Product Manager</h6>
                       <h4> -- </h4>
-                      <h6>Master of IT from Monash University</h6>
-                      <h6>1 year overseas working experience</h6>
+                      <h6>Senior Associate from PwC</h6>
+                      <h6>4 years of IT Consulting experience</h6>
                       <h6>Mandarin && English</h6>
                       <br />
                       <h6>More about me via : </h6>

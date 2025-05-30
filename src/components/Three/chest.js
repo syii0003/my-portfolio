@@ -40,7 +40,13 @@ export default function Model(props) {
   });
 
   return (
-    <group onClick={handleAnimation} ref={group} {...props} dispose={null}>
+    <group 
+      onClick={handleAnimation}
+      onPointerDown={handleAnimation}
+      ref={group} 
+      {...props} 
+      dispose={null}
+    >
       <a.group position={[0, -0.99, 0]} rotation={chestOpen.position}>
         <primitive object={nodes.Bone} />
         <a.primitive rotation={chestOpen.rotation} object={nodes.Bone001} />

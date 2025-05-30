@@ -1,5 +1,6 @@
 import WorkIcon from "@material-ui/icons/Work";
 import SchoolIcon from "@material-ui/icons/School";
+import { Icon } from "@material-ui/core";
 
 /* Color palettes
  * https://coolors.co/f94144-f3722c-f8961e-f9c74f-90be6d-43aa8b-577590
@@ -19,10 +20,17 @@ import SchoolIcon from "@material-ui/icons/School";
 */
 export default [
   {
-    title: "Self Learning",
-    subtitle: "My Portfolio",
-    date: "Jan 2021",
+    title: "AI exploring",
+    subtitle : "Shanghai",
+    date: "Feb 2025 - Present",
     icon: SchoolIcon,
+    color: 'orange'
+  },
+  {
+    title: "IT Consultant - AI product",
+    subtitle: "PwC - Shanghai",
+    date: "Mar 2021 - Oct 2024",
+    icon: WorkIcon,
     color: "navy",
   },
   {
@@ -57,7 +65,7 @@ export default [
   {
     title: "Bachelor Degrees",
     subtitle: "Management && Business Information Systems",
-    date: "Sep 2013 – Jun 2017",
+    date: "Sep 2013 - Jun 2017",
     icon: SchoolIcon,
     color: "#43AA8B",
   },

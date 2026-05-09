@@ -5,6 +5,7 @@ import { Loader, OrbitControls, softShadows } from "@react-three/drei";
 import { useSpring } from "react-spring";
 import Lights from "./components/Three/lights";
 import Floor from "./components/Three/floor";
+import Particles from "./components/Three/particles";
 //Styles
 import "./assets/styles/App.scss";
 //Model
@@ -48,6 +49,10 @@ const App = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
+      <div className="chest-hint">
+        <div className="arrow">↓</div>
+        {/* <div className="text">Click to Open</div> */}
+      </div>
       <Canvas
         colorManagement
         shadowMap
@@ -56,6 +61,7 @@ const App = () => {
         <Lights />
         <Suspense fallback={null}>
           <Model open={open} setOpen={setOpen} />
+          <Particles trigger={open} />
           <Floor />
           <ZoomWithOrbital />
         </Suspense>

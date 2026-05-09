@@ -18,6 +18,7 @@ export default function Model(props) {
   );
   const actions = useRef();
   const [mixer] = useState(() => new THREE.AnimationMixer());
+  const [isHovered, setIsHovered] = useState(false);
   useFrame((state, delta) => mixer.update(delta));
   useEffect(() => {
     actions.current = {
@@ -39,15 +40,28 @@ export default function Model(props) {
     position: props.open ? [0, -1.5, 0] : [0, 0, 0],
   });
 
+  // Hover rotation effect
+  const hoverRotation = useSpring({
+    rotation: isHovered ? [0.1, 0.2, 0] : [0, 0, 0],
+    scale: isHovered ? 1.05 : 1,
+    config: { mass: 1, tension: 300, friction: 10 },
+  });
+
   return (
     <group 
       onClick={handleAnimation}
       onPointerDown={handleAnimation}
+      onPointerEnter={() => setIsHovered(true)}
+      onPointerLeave={() => setIsHovered(false)}
       ref={group} 
-      {...props} 
+      {...props}
       dispose={null}
     >
-      <a.group position={[0, -0.99, 0]} rotation={chestOpen.position}>
+      <a.group 
+        position={[0, -0.99, 0]} 
+        rotation={chestOpen.position}
+        // scale={hoverRotation.scale}
+      >
         <primitive object={nodes.Bone} />
         <a.primitive rotation={chestOpen.rotation} object={nodes.Bone001} />
         <skinnedMesh

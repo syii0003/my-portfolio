@@ -20,11 +20,11 @@ import { Icon } from "@material-ui/core";
 */
 export default [
   {
-    title: "AI exploring",
-    subtitle : "Shanghai",
-    date: "Feb 2025 - Present",
-    icon: SchoolIcon,
-    color: 'orange'
+    title: "AI Product Manager",
+    subtitle: "Linkwise Data Intelligence - Shanghai",
+    date: "Jun 2025 - Present",
+    icon: WorkIcon,
+    color: "#F94144",
   },
   {
     title: "IT Consultant - AI product",
@@ -41,7 +41,7 @@ export default [
   //   color: "#F94144",
   // },
   {
-    title: "Assistant Project Manager",
+    title: "Associate Project Manager",
     subtitle: "ASP Access Flooring - Melbourne",
     date: "Sep 2019 - Oct 2020",
     icon: WorkIcon,

@@ -45,8 +45,7 @@ const CardModal = ({ open, setOpen }) => {
                     <div className="info">
                       <h6>AI Product Manager</h6>
                       <h4> -- </h4>
-                      <h6>Senior Associate from PwC</h6>
-                      <h6>4 years of IT Consulting experience</h6>
+                      <h6>Building B2B AI Solutions with Knowledge Graphs & Multi-Agent Systems</h6>
                       <h6>Mandarin && English</h6>
                       <br />
                       <h6>More about me via : </h6>
